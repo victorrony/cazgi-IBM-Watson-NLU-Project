@@ -1,5 +1,5 @@
 const express = require('express');
-const dotenv = require("dotenv");
+
 const app = new express();
 
 /*This tells the server to use the client 
@@ -65,6 +65,7 @@ app.get("/url/emotion", (req,res) => {
     });
 });
 
+   
 //The endpoint for the webserver ending with /url/sentiment
 app.get("/url/sentiment", (req,res) => {
     let urlToAnalyze = req.query.url
