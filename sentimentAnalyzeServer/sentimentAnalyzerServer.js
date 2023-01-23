@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require("dotenv");
 const app = new express();
 
 /*This tells the server to use the client 
@@ -34,9 +35,9 @@ function getNLUInstance() {
 
 
 //The default endpoint for the webserver
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.render('index.html');
-  });
+});
 
 //The endpoint for the webserver ending with /url/emotion
 app.get("/url/emotion", (req,res) => {
